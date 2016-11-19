@@ -1,0 +1,16 @@
+{
+  "name": "rdirector-cli",
+  "version": "0.1.0",
+  "description": "CLI for the Directr framework",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "rdirector": "./index.js"
+  },
+  "dependencies": {
+    "cli": "^1.0.1",
+    "request": "^2.79.0",
+    "shelljs": "^0.7.5",
+    "tar": "^2.2.1"
+  }
+}
