@@ -9,8 +9,7 @@
   },
   "dependencies": {
     "cli": "^1.0.1",
-    "request": "^2.79.0",
-    "shelljs": "^0.7.5",
-    "tar": "^2.2.1"
+    "create-react-app": "^1.0.2",
+    "shelljs": "^0.7.5"
   }
 }
