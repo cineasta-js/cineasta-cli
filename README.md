@@ -29,7 +29,7 @@ $ yarn run start
 
 ### Generating
 
-To generate a part, you can just type (inside project's directory):
+To generate a new part for your app, you can just type (inside project's directory):
 ```
 $ cineasta g <type> <name>
 ```
