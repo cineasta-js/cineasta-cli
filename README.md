@@ -9,6 +9,7 @@ CineastaJS uses `create-react-app` to generate a React app structure, and then, 
 - automatic page (scene) routing
 - require/import from relative paths (src)
 - possibility to group scenes as takes (with grouped scenes you can have a wrapper component for multiple routes)
+- cli commands for creating app and generating specific parts of the app
 
 ### How?
 
@@ -25,6 +26,17 @@ $ cineasta new my-app
 $ cd my-app
 $ yarn run start
 ```
+
+### Generating
+
+To generate a part, you can just type (inside project's directory):
+```
+$ cineasta g <type> <name>
+```
+where type can be:
+- scene
+- take
+and name whatever you want to call it
 
 ## Directory structure
 
