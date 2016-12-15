@@ -1,3 +1,7 @@
+#!/usr/bin/env node
+
+'use strict'
+
 const cli = require('cli')
 const config = require('./package.json')
 const newProject = require('./lib/newProject')
