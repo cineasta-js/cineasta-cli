@@ -5,7 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "bin": {
-    "rdirector": "./index.js"
+    "cineasta": "./index.js"
   },
   "dependencies": {
     "cli": "^1.0.1",
