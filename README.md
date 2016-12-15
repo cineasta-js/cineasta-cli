@@ -36,6 +36,7 @@ $ cineasta g <type> <name>
 where type can be:
 - scene
 - take
+
 and name whatever you want to call it
 
 ## Directory structure
