@@ -43,7 +43,7 @@ my-app
   |   |-- index.js
 ```
 
-`src/index.js` and `src/config/routes.js` is where we do our magic, and you don't need to worry about editing this two files
+`src/index.js` and `src/config/routes.js` is where we do our magic, and you don't need to worry about editing them
 
 ### src/config
 
