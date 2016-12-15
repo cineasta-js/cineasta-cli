@@ -2,8 +2,14 @@
   "name": "cineasta-cli",
   "version": "0.1.0",
   "description": "CLI for the CineastaJS framework",
-  "main": "index.js",
+  "keywords": [
+    "react"
+  ],
   "license": "MIT",
+  "repositroy": "cineasta-js/cineasta-cli",
+  "bugs": {
+    "url": "https://github.com/cineasta-js/cineasta-cli/issues"
+  },
   "bin": {
     "cineasta": "./index.js"
   },
