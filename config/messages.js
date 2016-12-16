@@ -1,4 +1,5 @@
 module.exports = {
+  invalidProjectName: 'You must provide a valid name for your project',
   generatingProject: 'Generating project',
   copyingTemplate: 'Adding some magic',
   removingFiles: 'Cleaning up',
