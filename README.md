@@ -1,7 +1,5 @@
 ![cineastaJS](https://github.com/cineasta-js/brand/raw/master/logos/logo-transparent.png)
 
-The CLI for the cineastaJS framework
-
 ---
 
 ### What?
