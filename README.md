@@ -6,7 +6,7 @@ The CLI for the cineastaJS framework
 
 ### What?
 
-CineastaJS uses `create-react-app` to generate a React app structure, and then, add some features to make your life esier:
+cineastaJS uses `create-react-app` to generate a React app structure, and then, add some features to make your life esier:
 - plugued with `react-router`
 - automatic page (scene) routing
 - require/import from relative paths (src)
@@ -15,7 +15,7 @@ CineastaJS uses `create-react-app` to generate a React app structure, and then, 
 
 ### How?
 
-CineastaJS is a framework on top of `create-react-app`, so you have to install it too.
+cineastaJS is a framework on top of `create-react-app`, so you have to install it too.
 
 ```
 $ yarn global add create-react-app cineasta-cli
