@@ -1,6 +1,6 @@
 {
   "name": "cineasta-cli",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "CLI for the CineastaJS framework",
   "keywords": [
     "react"
