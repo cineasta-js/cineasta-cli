@@ -52,6 +52,7 @@ my-app
   |   |-- config
   |   |     |-- routes.js
   |   |     |-- initializers.js
+  |   |     |-- providers.js
   |   |-- scenes
   |   |     |-- index.js
   |   |-- takes
@@ -63,7 +64,27 @@ my-app
 
 ### src/config
 
-All kinds of app configurations, including the routes and initializers
+All kinds of app configurations, including the routes and initializers and providers
+
+## src/config/initializers.js
+
+Import anything you want to expose globally to your app, like a CSS framework for example
+
+## src/config/providers.js
+
+Define here the providers your app need, like redux provider for example:
+```js
+import { Provider } from 'react-redux'
+import configureStore from 'config/store'
+
+export const reduxProvider = (next) => (
+  <Provider store={ configureStore() }>
+    { next }
+  </Provider>
+)
+```
+
+You can export as many provider as you need
 
 ### src/scenes
 
