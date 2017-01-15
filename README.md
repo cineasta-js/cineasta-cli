@@ -51,6 +51,7 @@ my-app
   |-- src
   |   |-- config
   |   |     |-- routes.js
+  |   |     |-- initializers.js
   |   |-- scenes
   |   |     |-- index.js
   |   |-- takes
@@ -62,7 +63,7 @@ my-app
 
 ### src/config
 
-All kinds of app configurations, including the routes
+All kinds of app configurations, including the routes and initializers
 
 ### src/scenes
 
