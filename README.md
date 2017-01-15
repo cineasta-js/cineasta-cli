@@ -36,6 +36,8 @@ $ cineasta g <type> <name>
 where type can be:
 - scene
 - take
+- component
+- container
 
 and name whatever you want to call it
 
