@@ -38,6 +38,7 @@ where type can be:
 - take
 - component
 - container
+- provider
 
 and name whatever you want to call it
 
