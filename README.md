@@ -39,6 +39,8 @@ where type can be:
 - component
 - container
 - provider
+- redux
+- reducer
 
 and name whatever you want to call it
 
@@ -131,4 +133,37 @@ export const component = (props) => (
     { props.children }
   </div>
 )
+```
+
+### Redux
+
+When you generate redux, cineasta prepare for you the necessary dependencies, connects the provider and creates the store where all reducer importing and combining will live. You don't need to worry with this file, cineasta will take care of everything.
+
+#### Reducer
+
+Once you generated redux, you can start generating the reducers. When you generate a reducer, a single file will be created inside `src/reducers` directory where all your actions and the reducer will live. The file will be started with a sample action and you can play with it all you want.
+
+To easy your life, cineasta uses the great `redux-actions` to create and handle anything inside your reducer.
+
+The reducer structure is:
+```js
+import { createAction, handleActions } from 'redux-actions'
+
+export const name = '${ name }'
+
+const initialState = {
+  loading: false,
+  data: {},
+}
+
+export const request = createAction(
+  'REQUEST'
+)
+
+export default handleActions({
+  [request]: (state) => ({
+    ...state,
+    loading: true,
+  }),
+}, initialState)
 ```
