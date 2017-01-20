@@ -8,4 +8,5 @@ module.exports = {
   invalidTypeName: 'You must provide a name for your',
   generatedAt: 'generated at',
   providerGenerateInstructions: 'now you just need to import your provider\'s module',
+  installingDependencies: 'Installing dependencies',
 }
