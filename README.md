@@ -149,7 +149,7 @@ The reducer structure is:
 ```js
 import { createAction, handleActions } from 'redux-actions'
 
-export const name = '${ name }'
+export const name = 'myReducer'
 
 const initialState = {
   loading: false,
