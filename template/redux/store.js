@@ -7,7 +7,7 @@ const rootReducer = combineReducers(
   .keys()
   .filter((key) => !/\.test.js/.test(key))
   .map((key) => reducersReq(key))
-  .reduce((memo, module) => ({ ...memo, [module.name]: module.reducer }), {})
+  .reduce((memo, module) => ({ ...memo, [module.name]: module.default }), {})
 )
 
 export default (initialState) => createStore(
