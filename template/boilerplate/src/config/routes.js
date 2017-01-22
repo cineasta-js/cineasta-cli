@@ -20,7 +20,11 @@ const scenes = getFiles(scenesReq).map(({ fileName, module }) => ({
 
 const takes = getFiles(takesReq).map(({ fileName, module }) => (
   isFunction(module.default) ? {
-    path: fileName.replace(/\.js/, '').replace('./', '/').toLowerCase(),
+    path: fileName
+          .replace(/\.js/, '')
+          .replace('./', '/')
+          .toLowerCase()
+          .replace(/\/index$/, '/'),
     component: module.default
   } : module
 ))
