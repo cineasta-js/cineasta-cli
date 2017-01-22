@@ -41,6 +41,7 @@ where type can be:
 - provider
 - redux
 - reducer
+- routes
 
 and name whatever you want to call it
 
