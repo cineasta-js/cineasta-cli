@@ -3,12 +3,11 @@ module.exports = ({ name, path }) => (
 `
 import React from 'react'
 
-export const path='${ path }'
+export const path = '${ path }'
 
-export const component = (props) => (
+export const component = () => (
   <div>
-    <h1>take ${ name }</h1>
-    { props.children }
+    <p>${ name } Take</p>
   </div>
 )
 `

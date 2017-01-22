@@ -10,15 +10,15 @@ const getFiles = (req) => req
     module: req(key)
 }))
 
-const takesReq = require.context('takes', true, /\.js$/)
 const scenesReq = require.context('scenes', true, /\.js$/)
+const takesReq = require.context('takes', true, /\.js$/)
 
-const takes = getFiles(takesReq).map(({ fileName, module }) => ({
+const scenes = getFiles(scenesReq).map(({ fileName, module }) => ({
   ...module,
   name: fileName.replace(/\.js/, '').replace('./', '').toLowerCase()
 }))
 
-const scenes = getFiles(scenesReq).map(({ fileName, module }) => (
+const takes = getFiles(takesReq).map(({ fileName, module }) => (
   isFunction(module.default) ? {
     path: fileName.replace(/\.js/, '').replace('./', '/').toLowerCase(),
     component: module.default
@@ -26,21 +26,21 @@ const scenes = getFiles(scenesReq).map(({ fileName, module }) => (
 ))
 
 const routes = [
-  ...takes
-  .map((take, index) => (
-    <Route key={ index } { ...take }>
-      { scenes
-        .filter((scene) => scene.take === take.name)
-        .map((scene, index) => (
-          <Route key={ index } { ...scene } />
+  ...scenes
+  .map((scene, index) => (
+    <Route key={ index } { ...scene }>
+      { takes
+        .filter((take) => take.scene === scene.name)
+        .map((take, index) => (
+          <Route key={ index } { ...take } />
         ))
       }
     </Route>
   )),
-  ...scenes
-  .filter((scene) => !scene.take)
-  .map((scene, index) => (
-    <Route key={ index } { ...scene } />
+  ...takes
+  .filter((take) => !take.scene)
+  .map((take, index) => (
+    <Route key={ index } { ...take } />
   ))
 ]
 

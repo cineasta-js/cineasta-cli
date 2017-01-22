@@ -6,9 +6,9 @@
 
 cineastaJS uses `create-react-app` to generate a React app structure, and then, add some features to make your life esier:
 - plugued with `react-router`
-- automatic page (scene) routing
+- automatic page (take) routing
 - require/import from relative paths (src)
-- possibility to group scenes as takes (with grouped scenes you can have a wrapper component for multiple routes)
+- possibility to group takes as scenes (with grouped scenes you can have a wrapper component for multiple routes)
 - cli commands for creating app and generating specific parts of the app
 
 ### How?
@@ -57,9 +57,9 @@ my-app
   |   |     |-- initializers.js
   |   |     |-- providers.js
   |   |-- scenes
-  |   |     |-- index.js
-  |   |-- takes
   |   |--   |-- app.js
+  |   |-- takes
+  |   |     |-- index.js
   |   |-- index.js
 ```
 
@@ -91,37 +91,9 @@ You can export as many provider as you need
 
 ### src/scenes
 
-The scenes are the pages of the app, each scene is attached to a route. There are two ways to create a scene:
-
-Exporting a component by default (this way the route path will match file name):
+The scene act like a wrapper, where it's possible to group takes under the same wrapper component:
 ```js
-// src/scenes/b.js
-
-import React from 'react'
-
-export default () => (
-  <div>Page A</div>
-)
-```
-
-Exporting the route props (with this way, it's possible to create a custom route):
-```js
-// src/scenes/a.js
-
-import React from 'react'
-
-export const path = '/b'
-
-export const component = () => (
-  <div>Page B</div>
-)
-```
-
-### src/takes
-
-The take act like a scenes wrapper, where it's possible to group scenes under the same wrapper component:
-```js
-// src/takes/app.js
+// src/scene/app.js
 
 export const onEnter = () => {
   /* here can go auth logic to allow/block all scenes that point to this take */
@@ -132,6 +104,34 @@ export const component = (props) => (
     <div>Here goes some header/nav</div>
     { props.children }
   </div>
+)
+```
+
+### src/takes
+
+The takes are like the pages of the app, each take is attached to a route. There are two ways to create a take:
+
+Exporting a component by default (this way the route path will match file name):
+```js
+// src/takes/b.js
+
+import React from 'react'
+
+export default () => (
+  <div>Take B</div>
+)
+```
+
+Exporting the route props (with this way, it's possible to create a custom route):
+```js
+// src/takes/a.js
+
+import React from 'react'
+
+export const path = '/b'
+
+export const component = () => (
+  <div>Take B</div>
 )
 ```
 
