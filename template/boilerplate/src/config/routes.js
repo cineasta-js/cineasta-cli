@@ -4,7 +4,7 @@ import isFunction from 'lodash/isFunction'
 
 const getFiles = (req) => req
   .keys()
-  .filter((key) => !/\.test.js/.test(key))
+  .filter((key) => !/\.\w*\.js/.test(key))
   .map((key) => ({
     fileName: key,
     module: req(key)
