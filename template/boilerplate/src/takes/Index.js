@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const path = '/'
-export const take = 'app'
+export const scene = 'app'
 
 export const component = (props) => (
   <div>
