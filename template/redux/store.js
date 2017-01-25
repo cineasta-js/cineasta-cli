@@ -1,4 +1,5 @@
-import { createStore, compose, combineReducers } from 'redux'
+import { createStore, compose, combineReducers, applyMiddleware } from 'redux'
+import middlewares from 'config/reduxMiddlewares'
 
 const reducersReq = require.context('reducers', false, /\.js$/)
 
@@ -14,6 +15,7 @@ export default (initialState) => createStore(
   rootReducer,
   initialState,
   compose(
+    applyMiddleware(...middlewares),
     window.devToolsExtension ? window.devToolsExtension() : f => f
   ),
 )
