@@ -4,14 +4,13 @@ import isFunction from 'lodash/isFunction'
 
 const getFiles = (req) => req
   .keys()
-  .filter((key) => !/\.\w*\.js/.test(key))
   .map((key) => ({
     fileName: key,
     module: req(key)
 }))
 
-const scenesReq = require.context('scenes', true, /\.js$/)
-const takesReq = require.context('takes', true, /\.js$/)
+const scenesReq = require.context('scenes', true, /(\/|^)\w*\.js$/)
+const takesReq = require.context('takes', true, /(\/|^)\w*\.js$/)
 
 const scenes = getFiles(scenesReq).map(({ fileName, module }) => ({
   ...module,
