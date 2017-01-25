@@ -1,9 +1,3 @@
-/*
- * install redux and react-redux
- * generate redux provider
- * generate redux store
- * */
-
 const providerTemplate = require('../provider')
 const name = 'ReduxProvider'
 const props = { store: 'configureStore()' }
