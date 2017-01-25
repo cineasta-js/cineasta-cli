@@ -140,6 +140,8 @@ export const component = () => (
 
 When you generate redux, cineasta prepare for you the necessary dependencies, connects the provider and creates the store where all reducer importing and combining will live. You don't need to worry with this file, cineasta will take care of everything.
 
+You can add as many middlewares as you need inside the `src/config/reduxMiddlewares.js` file and they will be automatically applied to the redux store.
+
 #### Reducer
 
 Once you generated redux, you can start generating the reducers. When you generate a reducer, a single file will be created inside `src/reducers` directory where all your actions and the reducer will live. The file will be started with a sample action and you can play with it all you want.
