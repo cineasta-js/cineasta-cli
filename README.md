@@ -2,6 +2,10 @@
 
 ---
 
+### Full Documentation
+
+Read de full documentation at [cineasta.js.org](https://cineasta.js.org)
+
 ### What?
 
 cineastaJS uses `create-react-app` to generate a React app structure, and then, add some features to make your life esier:
